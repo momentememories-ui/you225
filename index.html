@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>สุขสันต์วันครบรอบ!</title>
+    <title>Happy Anniversary</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -221,10 +221,10 @@
             display: none;
             height: 100%;
             width: 100%;
-            background-size: contain; /* ป้องกันภาพซูมและตัดขอบ */
+            background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: #111; /* พื้นหลังส่วนที่เหลือกรณีสัดส่วนรูปไม่เต็มจอ */
+            background-color: #111;
             position: relative;
             overflow: hidden;
         }
@@ -264,8 +264,8 @@
     <!-- หน้า 1: เกมสลับภาพแบบลากวาง -->
     <div id="game-page">
         <div class="header-title">
-            <h1>🧩 จิ๊กซอว์ความทรงจำของเรา</h1>
-            <p>ลากรูปไปสลับตำแหน่งกัน... ให้กลายเป็นรูปสวยๆ นะคะ 💕</p>
+            <h1>🧩 Our Memory Puzzle</h1>
+            <p>Drag and swap the pieces to reveal our picture! 💕</p>
         </div>
 
         <!-- กระดานสลับภาพ 3x3 -->
@@ -274,17 +274,17 @@
         </div>
 
         <div class="footer-hint">
-            👆 แตะค้างที่รูป แล้วลากไปวางสลับกับรูปอื่นได้เลย!
+            👆 Tap and drag pieces to swap them!
         </div>
     </div>
 
     <!-- Modal แจ้งเตือนเมื่อเรียงถูกครบ -->
     <div id="successModal" class="modal">
         <div class="modal-content">
-            <div class="success-title">🎉 เก่งที่สุดเลยยย!</div>
-            <div style="font-size: 14px; color: #636e72; margin-top: 6px;">ต่อภาพสำเร็จแล้วนะ 🥰</div>
-            <div class="money-text">ขอบคุณที่รักกันนะคะ ❤️</div>
-            <button class="next-btn" onclick="goToWishPage()">ไปดูกล่องความทรงจำกันต่อเลย ✨</button>
+            <div class="success-title">🎉 Amazing!</div>
+            <div style="font-size: 14px; color: #636e72; margin-top: 6px;">You completed the puzzle! 🥰</div>
+            <div class="money-text">ขอบคุณที่รักกันนะคะ</div>
+            <button class="next-btn" onclick="goToWishPage()">Open Our Memory Card ✨</button>
         </div>
     </div>
 
@@ -508,7 +508,7 @@
 
     // ฟังก์ชันสร้างอิโมจิลอยขึ้นมาอัตโนมัติ
     function startFloatingEmojis(container) {
-        const emojis = [ '💚', '✨', '🌿'🍀'];
+        const emojis = ['💚', '✨', '🌿', '🍀'];
         setInterval(() => {
             let span = document.createElement('span');
             span.className = 'floating-emoji';
