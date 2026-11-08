@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Happy Anniversary</title>
+    <title>สุขสันต์วันครบรอบ</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -224,7 +224,7 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: #111;
+            background-color: #d8f3dc; /* เปลี่ยนเป็นสีเขียวพาสเทลเข้ากับธีม */
             position: relative;
             overflow: hidden;
         }
@@ -233,23 +233,23 @@
         .floating-emoji {
             position: absolute;
             bottom: -50px;
-            font-size: 24px;
+            font-size: 26px;
             animation: floatUp 4s linear infinite;
             z-index: 10;
             pointer-events: none;
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         @keyframes floatUp {
             0% {
-                transform: translateY(0) translateX(0) scale(0.8);
+                transform: translateY(0) scale(0.8);
                 opacity: 0;
             }
             20% {
                 opacity: 1;
             }
             100% {
-                transform: translateY(-105vh) translateX(calc(sin(var(--random-x)) * 50px)) scale(1.2);
+                transform: translateY(-105vh) scale(1.2);
                 opacity: 0;
             }
         }
@@ -261,7 +261,7 @@
 <audio id="bgMusic" src="song.mp3" loop preload="auto"></audio>
 
 <div class="mobile-container">
-    <!-- หน้า 1: เกมสลับภาพแบบลากวาง -->
+    <!-- หน้า 1: หน้าเล่นเกมสลับภาพ -->
     <div id="game-page">
         <div class="header-title">
             <h1>🧩 จิ๊กซอว์ความทรงจำของเรา</h1>
@@ -516,18 +516,18 @@
             
             // สุ่มตำแหน่งแนวนอน
             span.style.left = Math.random() * 90 + 5 + '%';
-            // สุ่มความเร็วและขนาดเล็กน้อย
+            // สุ่มความเร็วในการลอย
             let duration = Math.random() * 2 + 3; // 3 - 5 วินาที
             span.style.animationDuration = duration + 's';
-            span.style.fontSize = (Math.random() * 12 + 20) + 'px';
+            span.style.fontSize = (Math.random() * 10 + 20) + 'px';
             
             container.appendChild(span);
 
-            // ลบ element ทิ้งเมื่อลอยพ้นจอแล้ว
+            // ลบทิ้งเมื่ออนิเมชันจบ
             setTimeout(() => {
                 span.remove();
             }, duration * 1000);
-        }, 400); // สร้างใหม่ทุกๆ 0.4 วินาที
+        }, 400); // สร้างอิโมจิใหม่ทุกๆ 0.4 วินาที
     }
 
     window.onload = initPuzzle;
